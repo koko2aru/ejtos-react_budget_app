@@ -91,7 +91,8 @@ const initialState = {
         { name: 'Pound', value:"£"},
         { name: 'Euro', value:"€"},
         { name: 'Ruppee', value:"#"},
-    ]
+    ],
+    currecy: "£"
 };
 
 // 2. Creates the context this is the thing our components import and use to get the state
