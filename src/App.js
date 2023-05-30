@@ -23,6 +23,9 @@ const App = () => {
                     <div className='col-sm'>
                         <ExpenseTotal />
                     </div>
+                    <div className='col-sm'>
+                        <Currency />
+                    </div>
                 </div>
                 <h3 className='mt-3'>Allocation</h3>
                 <div className='row '>
@@ -39,6 +42,26 @@ const App = () => {
             </div>
         </AppProvider>
     );
+};
+
+const Currency = () => {
+    const [currency, setCurrency] = useState("£")
+    
+    return(
+    <div>
+        <div class="dropdown">
+  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Currency £(Pound)
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <select onChange={event=>setCurrency(event.target.value)}>
+    {currencies.map((currency) => (<option class="dropdown-item" value={currencies.value} >{currencies.value}{currencies.name}</option>))}
+    </select>
+  </div>
+</div>
+    </div>
+    );
+    
 };
 
 export default App;
