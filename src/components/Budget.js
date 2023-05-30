@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { dispatch, totalExpenses, currency } from '../context/AppContext';
 const Budget = () => {
     const [budget, setBudget] = useState(totalExpenses);
-    const setBudget=()=>{
+    if (action === 'Set'){
         if (budget > 20000){
             alert('the value cannot exceed more than {currency}20,000');
             setBudget(totalExpenses);
@@ -21,7 +21,7 @@ const Budget = () => {
     return (
         <div className='alert alert-secondary'>
             <span>Budget: {currency}</span>
-            <input type='number' step='10' value={budget} onChange={(e)=>{setBudget(e.target.value)}>
+            <input name='Set' type='number' step='10' value={budget} onChange={(e)=>{setBudget(e.target.value)}>
             </input>
         </div>
     );
