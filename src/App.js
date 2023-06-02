@@ -44,24 +44,23 @@ const App = () => {
     );
 };
 
+export default App;
+
+import React, { useContext } from 'react';
+import { AppContext } from '../context/AppContext';
+
 const Currency = () => {
-    const [currency, setCurrency] = useState("£")
-    
+const { dispatch, currency } = useContext(AppContext);
+    const changeCurrency = (val) => {
+        dispatch({
+                type: 'CHG_CURRENCY',
+                payload: val,
+            })
+    };
     return(
-    <div>
-        <div class="dropdown">
-  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Currency £(Pound)
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <select onChange={event=>setCurrency(event.target.value)}>
-    {currencies.map((currency) => (<option class="dropdown-item" value={currencies.value} >{currencies.value}{currencies.name}</option>))}
-    </select>
-  </div>
-</div>
-    </div>
+    
     );
     
 };
 
-export default App;
+export default Currency;
