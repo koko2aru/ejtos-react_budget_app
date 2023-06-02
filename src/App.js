@@ -7,6 +7,7 @@ import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import AllocationForm from './components/AllocationForm';
 import RemainingBudget from './components/Remaining';
+import Currency from './components/Currency';
 
 const App = () => {
     return (
@@ -57,8 +58,17 @@ const { dispatch, currency } = useContext(AppContext);
                 payload: val,
             })
     };
-    return(
-    
+    return (
+        <div > {
+      <select name="currency" className='alert alert-success' id="currency" onChange={event=>changeCurrency(event.target.value)}>
+        Currency
+        <option value="$">$ Dollar</option>
+        <option value="£" default>£ Pound</option>
+        <option value="€">€ Euro</option>
+        <option value="₹">₹ Ruppee</option>
+      </select>	
+      }	
+    </div>
     );
     
 };
