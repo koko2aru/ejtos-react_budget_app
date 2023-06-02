@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const Budget = () => {
-const { budget, currency } = useContext(AppContext);
+const { budget, totalExpenses, currency } = useContext(AppContext);
     const changeBudget = (val) =>{
         if (budget > 20000){
             alert('the value cannot exceed more than ' {curreny}' 20,000');
