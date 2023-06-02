@@ -86,12 +86,6 @@ const initialState = {
         { id: "Human Resource", name: 'Human Resource', cost: 40 },
         { id: "IT", name: 'IT', cost: 500 },
     ],
-    currencies: [
-        { name: 'Dollar', value:"$"},
-        { name: 'Pound', value:"£"},
-        { name: 'Euro', value:"€"},
-        { name: 'Ruppee', value:"#"},
-    ],
     currecy: "£"
 };
 
