@@ -1,27 +1,30 @@
-import React, { useState } from 'react';
-import { dispatch, totalExpenses, currency } from '../context/AppContext';
+import React, { useContext } from 'react';
+import { AppContext } from '../context/AppContext';
+
 const Budget = () => {
-    const [budget, setBudget] = useState(totalExpenses);
-    if (action === 'Set'){
+const { budget, currency } = useContext(AppContext);
+    const changeBudget = (val) =>{
         if (budget > 20000){
-            alert('the value cannot exceed more than {currency}20,000');
-            setBudget(totalExpenses);
+            alert('the value cannot exceed more than ' {curreny}' 20,000');
             return;
         }
         if (budget < totalExpenses){
-            alert('the value cannot exceed more than {currency}20,000');
-            setBudget(totalExpenses);
+            alert('The value cannot be lower expenses');
             return;
         }
-    dispatch ({
-        type: 'SET_BUDGET',
-        payload: budget,
-    });
+        dispatch ({
+            type: 'SET_BUDGET',
+            payload: val,
+        });
     };
     return (
         <div className='alert alert-secondary'>
-            <span>Budget: {currency}</span>
-            <input name='Set' type='number' step='10' value={budget} onChange={(e)=>{setBudget(e.target.value)}>
+            <label>Budget: {currency}</label>
+            <input 
+            type='number' 
+            step='10' 
+            value={budget} 
+            onChange={(e)=>{changeBudget(e.target.value)}>
             </input>
         </div>
     );
