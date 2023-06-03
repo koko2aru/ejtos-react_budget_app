@@ -34,9 +34,8 @@ const AllocationForm = (props) => {
     };
 
     return (
-        <div>
+        
             <div className='row'>
-
             <div className="input-group mb-3" style={{ marginLeft: '2rem' }}>
                     <div className="input-group-prepend">
                 <label className="input-group-text" htmlFor="inputGroupSelect01">Department</label>
@@ -58,8 +57,12 @@ const AllocationForm = (props) => {
                         <option defaultValue value="Add" name="Add">Add</option>
                 <option value="Reduce" name="Reduce">Reduce</option>
                   </select>
+                
+                <div className="input-group-prepend" style={{ marginLeft: '2rem' }}>
+                <label className="input-group-text" htmlFor="inputGroupSelect02"> {currency}</label>
+                  </div>
 
-                    {currency}<input
+                   <input
                         required='required'
                         type='number'
                         id='cost'
@@ -74,7 +77,7 @@ const AllocationForm = (props) => {
                 </div>
                 </div>
 
-        </div>
+    
     );
 };
 
