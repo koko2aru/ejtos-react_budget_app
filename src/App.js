@@ -59,9 +59,9 @@ const { dispatch, currency } = useContext(AppContext);
             })
     };
     return (
-        <div > {
-      <select name="currency" className='alert alert-success' id="currency" onChange={event=>changeCurrency(event.target.value)}>
-        Currency
+        <div className='alert alert-secondary'>
+      <select class="selectpicker" title='Currency (£ Pound)' data-style="btn-info" onChange={event=>changeCurrency(event.target.value)}>
+        
         <option value="$">$ Dollar</option>
         <option value="£" default>£ Pound</option>
         <option value="€">€ Euro</option>
