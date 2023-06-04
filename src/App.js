@@ -67,7 +67,6 @@ const { dispatch, currency } = useContext(AppContext);
         <option value="€">€ Euro</option>
         <option value="₹">₹ Ruppee</option>
       </select>	
-      }	
     </div>
     );
     
