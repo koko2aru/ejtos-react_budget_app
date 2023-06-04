@@ -20,7 +20,7 @@ const { dispatch, budget, totalExpenses, currency } = useContext(AppContext);
     return (
         <div className='alert alert-secondary'>
         <div className='input-group'>
-            <label>Budget: {currency}</label>
+            <label className='input-group-text'>Budget: {currency}</label>
             <input className='form-control' type='number' step='10' value={budget} onChange={(e)=>{changeBudget(e.target.value)}>
         </div>
          </div>
