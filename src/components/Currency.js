@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const Currency = () => {
-const { dispatch, currency } = useContext(AppContext);
+const { dispatch } = useContext(AppContext);
     const changeCurrency = (val) => {
         dispatch({
                 type: 'CHG_CURRENCY',
