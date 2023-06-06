@@ -63,6 +63,7 @@ const AllocationForm = (props) => {
                   </div>
 
                    <input
+                        className='form-control'
                         required='required'
                         type='number'
                         id='cost'
