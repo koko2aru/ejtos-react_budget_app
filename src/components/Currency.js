@@ -14,7 +14,7 @@ const { dispatch } = useContext(AppContext);
       <select class="selectpicker" title='Currency (£ Pound)' data-style="btn-info" onChange={event=>changeCurrency(event.target.value)}>
         
         <option value="$">$ Dollar</option>
-        <option value="£" default>£ Pound</option>
+        <option value="£" selected>£ Pound</option>
         <option value="€">€ Euro</option>
         <option value="₹">₹ Ruppee</option>
       </select>	
